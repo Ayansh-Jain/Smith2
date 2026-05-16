@@ -43,10 +43,11 @@ export default function Collaboration() {
       zIndex: 10,
     },
     card: {
-      background: '#fff',
+      background: '#1a1a1a',
       borderRadius: '30px',
       padding: '60px',
-      boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.1)',
+      boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
+      border: '1px solid rgba(212,175,55,0.15)',
       display: 'grid',
       gridTemplateColumns: '1fr 1fr',
       gap: '60px',
@@ -69,30 +70,32 @@ export default function Collaboration() {
     input: {
       padding: '15px 20px',
       borderRadius: '12px',
-      border: '2px solid #E0F2F1',
+      border: '2px solid rgba(212,175,55,0.2)',
+      background: 'rgba(255,255,255,0.05)',
       fontSize: '1rem',
       outline: 'none',
-      color: '#D4AF37',
+      color: '#FFD700',
       transition: 'border-color 0.3s ease',
     },
     textarea: {
       padding: '15px 20px',
       borderRadius: '12px',
-      border: '2px solid #E0F2F1',
+      border: '2px solid rgba(212,175,55,0.2)',
+      background: 'rgba(255,255,255,0.05)',
       fontSize: '1rem',
       minHeight: '120px',
       outline: 'none',
-      color: '#D4AF37',
+      color: '#FFD700',
       resize: 'vertical',
     },
     button: {
-      background: '#FFD700',
-      color: '#fff',
+      background: 'linear-gradient(135deg, #D4AF37, #FFD700)',
+      color: '#000',
       padding: '18px',
       borderRadius: '12px',
       border: 'none',
       fontSize: '1.1rem',
-      fontWeight: 700,
+      fontWeight: 800,
       cursor: 'pointer',
       display: 'flex',
       alignItems: 'center',
@@ -154,21 +157,21 @@ export default function Collaboration() {
               <div style={styles.iconBox}><FiStar /></div>
               <div>
                 <h4 style={{ color: '#D4AF37', marginBottom: '5px' }}>Exclusive Access</h4>
-                <p style={{ color: '#666', lineHeight: 1.5 }}>Get priority entry and VIP treatment at our partner water parks.</p>
+                <p style={{ color: 'rgba(255,255,255,0.7)', lineHeight: 1.5 }}>Get priority entry and VIP treatment at our partner water parks.</p>
               </div>
             </div>
             <div style={styles.feature}>
               <div style={styles.iconBox}><FiInstagram /></div>
               <div>
                 <h4 style={{ color: '#D4AF37', marginBottom: '5px' }}>Content Opportunities</h4>
-                <p style={{ color: '#666', lineHeight: 1.5 }}>Capture stunning visuals and create viral reels with high production value.</p>
+                <p style={{ color: 'rgba(255,255,255,0.7)', lineHeight: 1.5 }}>Capture stunning visuals and create viral reels with high production value.</p>
               </div>
             </div>
             <div style={styles.feature}>
               <div style={styles.iconBox}><FiYoutube /></div>
               <div>
                 <h4 style={{ color: '#D4AF37', marginBottom: '5px' }}>Growth Support</h4>
-                <p style={{ color: '#666', lineHeight: 1.5 }}>We feature top creators on our official channels, boosting your reach.</p>
+                <p style={{ color: 'rgba(255,255,255,0.7)', lineHeight: 1.5 }}>We feature top creators on our official channels, boosting your reach.</p>
               </div>
             </div>
           </div>

@@ -9,14 +9,14 @@ export default function ActivityCard({ activity, index }) {
   const styles = {
     card: {
       background: selected
-        ? 'linear-gradient(135deg, rgba(212,175,55,0.12), rgba(255,215,0,0.08))'
-        : '#fff',
+        ? 'rgba(212,175,55,0.1)'
+        : '#1a1a1a',
       borderRadius: '24px',
       padding: '36px 30px',
       boxShadow: selected
-        ? '0 8px 40px rgba(212,175,55,0.25), inset 0 0 0 2px rgba(212,175,55,0.4)'
-        : '0 4px 24px rgba(0,100,160,0.08)',
-      border: selected ? '2px solid rgba(212,175,55,0.5)' : '2px solid transparent',
+        ? '0 8px 40px rgba(0,0,0,0.5), inset 0 0 0 2px rgba(212,175,55,0.4)'
+        : '0 4px 24px rgba(0,0,0,0.4)',
+      border: selected ? '2px solid rgba(212,175,55,0.5)' : '1px solid rgba(212,175,55,0.15)',
       cursor: 'pointer',
       position: 'relative',
       overflow: 'hidden',
@@ -28,7 +28,7 @@ export default function ActivityCard({ activity, index }) {
       left: '-60%',
       width: '50%',
       height: '200%',
-      background: 'linear-gradient(105deg, transparent, rgba(255,255,255,0.5), transparent)',
+      background: 'linear-gradient(105deg, transparent, rgba(212,175,55,0.2), transparent)',
       transform: 'skewX(-20deg)',
     },
     emoji: {
@@ -45,7 +45,7 @@ export default function ActivityCard({ activity, index }) {
     },
     desc: {
       fontSize: '0.93rem',
-      color: '#5E7D9E',
+      color: 'rgba(255,255,255,0.7)',
       lineHeight: 1.7,
       marginBottom: '20px',
     },
@@ -53,44 +53,46 @@ export default function ActivityCard({ activity, index }) {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-between',
-      marginBottom: '20px',
+      marginBottom: '24px',
     },
     price: {
-      fontSize: '1.6rem',
+      fontSize: '1.7rem',
       fontWeight: 900,
       color: '#D4AF37',
     },
     duration: {
-      fontSize: '0.82rem',
-      color: '#90A4B8',
-      background: '#EFF8FF',
-      padding: '4px 12px',
+      fontSize: '0.8rem',
+      color: '#D4AF37',
+      background: 'rgba(212,175,55,0.1)',
+      border: '1px solid rgba(212,175,55,0.2)',
+      padding: '5px 14px',
       borderRadius: '50px',
-      fontWeight: 600,
+      fontWeight: 700,
     },
     btn: {
       width: '100%',
-      padding: '13px',
+      padding: '14px',
       borderRadius: '14px',
       background: selected
         ? 'linear-gradient(135deg, #D4AF37, #FFD700)'
-        : 'rgba(212,175,55,0.08)',
-      color: selected ? '#fff' : '#D4AF37',
-      fontWeight: 700,
+        : 'rgba(255,255,255,0.05)',
+      color: selected ? '#000' : '#D4AF37',
+      fontWeight: 800,
       fontSize: '0.95rem',
-      border: selected ? 'none' : '1.5px solid rgba(212,175,55,0.3)',
+      border: selected ? 'none' : '1.5px solid rgba(212,175,55,0.4)',
       transition: 'all 0.25s ease',
-      letterSpacing: '0.3px',
+      letterSpacing: '0.5px',
+      cursor: 'pointer',
     },
     selectedBadge: {
       position: 'absolute',
       top: '16px',
       right: '16px',
       background: 'linear-gradient(135deg, #D4AF37, #FFD700)',
-      color: '#fff',
+      color: '#000',
       fontSize: '0.72rem',
-      fontWeight: 700,
-      padding: '4px 10px',
+      fontWeight: 800,
+      padding: '4px 12px',
       borderRadius: '50px',
       letterSpacing: '1px',
     },

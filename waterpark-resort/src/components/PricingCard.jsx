@@ -26,16 +26,14 @@ export default function PricingCard({ pkg, index }) {
       zIndex: 1,
     },
     card: {
-      background: isPopular
-        ? 'linear-gradient(160deg, #FFD700, #D4AF37)'
-        : '#fff',
+      background: '#1a1a1a',
       borderRadius: '28px',
       padding: isPopular ? '50px 36px 44px' : '44px 36px',
       boxShadow: isPopular
-        ? '0 20px 70px rgba(255,215,0,0.4)'
-        : '0 6px 30px rgba(0,100,160,0.08)',
-      border: isPopular ? '2px solid rgba(255,215,0,0.4)' : '2px solid rgba(212,175,55,0.1)',
-      color: isPopular ? '#fff' : '#D4AF37',
+        ? '0 20px 70px rgba(0,0,0,0.5), 0 0 0 2px #D4AF37'
+        : '0 6px 30px rgba(0,0,0,0.3)',
+      border: isPopular ? '2px solid #D4AF37' : '1px solid rgba(212,175,55,0.15)',
+      color: '#fff',
       height: '100%',
     },
     name: {
@@ -43,7 +41,7 @@ export default function PricingCard({ pkg, index }) {
       fontWeight: 700,
       letterSpacing: '2px',
       textTransform: 'uppercase',
-      color: isPopular ? '#F1C40F' : '#D4AF37',
+      color: '#D4AF37',
       marginBottom: '16px',
     },
     price: {
@@ -52,14 +50,15 @@ export default function PricingCard({ pkg, index }) {
       lineHeight: 1,
       marginBottom: '6px',
       letterSpacing: '-1px',
+      color: '#FFD700',
     },
     perPerson: {
       fontSize: '0.88rem',
-      color: isPopular ? 'rgba(255,255,255,0.55)' : '#90A4B8',
+      color: 'rgba(212,175,55,0.6)',
       marginBottom: '32px',
     },
     divider: {
-      borderColor: isPopular ? 'rgba(255,255,255,0.15)' : 'rgba(212,175,55,0.15)',
+      borderColor: 'rgba(212,175,55,0.15)',
       marginBottom: '28px',
     },
     includeTitle: {
@@ -67,7 +66,7 @@ export default function PricingCard({ pkg, index }) {
       fontWeight: 700,
       letterSpacing: '1px',
       textTransform: 'uppercase',
-      color: isPopular ? 'rgba(255,255,255,0.5)' : '#90A4B8',
+      color: 'rgba(212,175,55,0.5)',
       marginBottom: '18px',
     },
     list: {
@@ -83,35 +82,33 @@ export default function PricingCard({ pkg, index }) {
       gap: '12px',
       fontSize: '0.95rem',
       fontWeight: 500,
+      color: 'rgba(255,255,255,0.85)',
     },
     checkIcon: {
       width: '22px',
       height: '22px',
       borderRadius: '50%',
-      background: isPopular ? 'rgba(255,215,0,0.25)' : 'rgba(212,175,55,0.1)',
+      background: 'rgba(212,175,55,0.15)',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      color: isPopular ? '#FFD700' : '#D4AF37',
+      color: '#FFD700',
       flexShrink: 0,
       fontSize: '0.65rem',
     },
     btn: {
       display: 'block',
       width: '100%',
-      padding: '15px',
+      padding: '16px',
       borderRadius: '14px',
       textAlign: 'center',
-      fontWeight: 700,
+      fontWeight: 800,
       fontSize: '1rem',
-      background: isPopular
-        ? 'linear-gradient(135deg, #FFD700, #D4AF37)'
-        : 'linear-gradient(135deg, #D4AF37, #FFD700)',
-      color: '#fff',
-      boxShadow: isPopular
-        ? '0 8px 32px rgba(255,215,0,0.4)'
-        : '0 6px 24px rgba(212,175,55,0.3)',
+      background: 'linear-gradient(135deg, #D4AF37, #FFD700)',
+      color: '#000',
+      boxShadow: '0 6px 24px rgba(212,175,55,0.4)',
       transition: 'all 0.25s ease',
+      textDecoration: 'none',
     },
   };
 

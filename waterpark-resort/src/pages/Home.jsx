@@ -32,13 +32,13 @@ export default function Home() {
       letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '16px',
     },
     title: { fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 900, color: '#D4AF37', letterSpacing: '-1px', lineHeight: 1.1, marginBottom: '16px' },
-    sub: { color: '#5E7D9E', fontSize: '1.05rem', maxWidth: '560px', lineHeight: 1.7, marginBottom: '60px' },
+    sub: { color: 'rgba(212,175,55,0.7)', fontSize: '1.05rem', maxWidth: '560px', lineHeight: 1.7, marginBottom: '60px' },
     grid3: { display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '28px' },
     whyGrid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '24px' },
     whyCard: {
       padding: '32px 28px', borderRadius: '20px',
-      background: 'linear-gradient(135deg, #f0f9ff, #e0f2ff)',
-      border: '1px solid rgba(212,175,55,0.12)',
+      background: '#1a1a1a',
+      border: '1px solid rgba(212,175,55,0.15)',
     },
     whyIcon: {
       width: '52px', height: '52px', borderRadius: '14px',
@@ -72,8 +72,8 @@ export default function Home() {
     }),
     // Reviews carousel
     reviewCard: {
-      background: '#fff', borderRadius: '20px', padding: '28px',
-      boxShadow: '0 6px 30px rgba(0,100,160,0.07)', border: '1px solid rgba(212,175,55,0.1)',
+      background: '#1a1a1a', borderRadius: '20px', padding: '28px',
+      boxShadow: '0 8px 32px rgba(0,0,0,0.3)', border: '1px solid rgba(212,175,55,0.15)',
     },
     stars: { display: 'flex', gap: '4px', color: '#FFB800', fontSize: '0.9rem', marginBottom: '12px' },
   };
@@ -159,7 +159,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }} whileHover={{ y: -6 }}>
               <div style={styles.stars}>{[...Array(t.rating)].map((_, j) => <FaStar key={j} />)}</div>
-              <p style={{ color: '#5E7D9E', lineHeight: 1.8, fontSize: '0.95rem', marginBottom: '20px', fontStyle: 'italic' }}>
+              <p style={{ color: 'rgba(255,255,255,0.8)', lineHeight: 1.8, fontSize: '0.95rem', marginBottom: '20px', fontStyle: 'italic' }}>
                 "{t.comment}"
               </p>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
@@ -195,7 +195,7 @@ export default function Home() {
                 transition={{ duration: 0.4, delay: i * 0.08 }} whileHover={{ y: -6 }}>
                 <div style={styles.whyIcon}><Icon /></div>
                 <h3 style={{ fontWeight: 800, color: '#D4AF37', fontSize: '1.05rem', marginBottom: '10px' }}>{title}</h3>
-                <p style={{ color: '#5E7D9E', fontSize: '0.9rem', lineHeight: 1.7 }}>{desc}</p>
+                <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem', lineHeight: 1.7 }}>{desc}</p>
               </motion.div>
             ))}
           </div>

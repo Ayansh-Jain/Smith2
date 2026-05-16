@@ -50,7 +50,8 @@ export default function Hero() {
         style={{
           position: 'relative',
           zIndex: 2,
-          padding: '80px 60px 60px',
+          padding: '80px 60px 60px 20px',
+        
           maxWidth: '800px',
           width: '100%',
         }}
@@ -76,11 +77,11 @@ export default function Hero() {
         <motion.h1
           {...fade(0.1)}
           style={{
-            fontSize: 'clamp(2rem, 5vw, 3.6rem)',
+            fontSize: 'clamp(2.5rem, 5vw, 3.6rem)',
             fontWeight: 900,
-            lineHeight: 1.1,
+      
             margin: '0 0 16px 0',
-            letterSpacing: '-1px',
+           
             color: '#fff',
           }}
           className="hero-heading"
@@ -204,47 +205,7 @@ export default function Hero() {
       </div>
 
       {/* ── Floating WhatsApp Badge — right edge ── */}
-      <motion.a
-        href={brand.whatsapp}
-        target="_blank"
-        rel="noopener noreferrer"
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0, transition: { delay: 0.6, duration: 0.5 } }}
-        whileHover={{ scale: 1.08 }}
-        style={{
-          position: 'absolute',
-          right: '20px',
-          bottom: '50%',
-          transform: 'translateY(50%)',
-          zIndex: 10,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: '5px',
-          background: '#25D366',
-          borderRadius: '12px',
-          padding: '12px 10px',
-          cursor: 'pointer',
-          textDecoration: 'none',
-          boxShadow: '0 4px 20px rgba(37,211,102,0.45)',
-        }}
-      >
-        <FaWhatsapp style={{ color: '#fff', fontSize: '1.6rem' }} />
-        <span
-          style={{
-            color: '#fff',
-            fontSize: '0.6rem',
-            fontWeight: 700,
-            letterSpacing: '0.5px',
-            textAlign: 'center',
-            lineHeight: 1.3,
-          }}
-        >
-          Chat on
-          <br />
-          WhatsApp
-        </span>
-      </motion.a>
+       
 
       {/* ── Wave divider ── */}
       <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, zIndex: 3 }}>

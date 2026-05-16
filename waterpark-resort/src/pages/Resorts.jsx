@@ -34,9 +34,9 @@ export default function Resorts() {
     sidebar: { position: 'sticky', top: '100px' },
     sideCard: (active) => ({
       padding: '14px 18px', borderRadius: '16px', cursor: 'pointer', marginBottom: '10px',
-      background: active ? 'linear-gradient(135deg, rgba(212,175,55,0.12), rgba(255,215,0,0.08))' : '#fff',
-      border: `2px solid ${active ? '#D4AF37' : 'rgba(212,175,55,0.1)'}`,
-      boxShadow: active ? '0 0 0 2px rgba(212,175,55,0.3), 0 8px 30px rgba(212,175,55,0.15)' : 'none',
+      background: active ? 'linear-gradient(135deg, rgba(212,175,55,0.12), rgba(255,215,0,0.08))' : '#1a1a1a',
+      border: `2px solid ${active ? '#D4AF37' : 'rgba(212,175,55,0.15)'}`,
+      boxShadow: active ? '0 0 0 2px rgba(212,175,55,0.3), 0 8px 30px rgba(0,0,0,0.5)' : 'none',
       transition: 'all 0.25s',
       display: 'flex', alignItems: 'center', gap: '12px',
     }),
@@ -50,11 +50,11 @@ export default function Resorts() {
       cursor: 'pointer', zIndex: 5, fontSize: '0.9rem',
       backdropFilter: 'blur(8px)', border: '1px solid rgba(255,255,255,0.2)',
     }),
-    detailCard: { background: '#fff', borderRadius: '24px', padding: '36px', boxShadow: '0 8px 40px rgba(0,100,160,0.06)', marginBottom: '24px' },
+    detailCard: { background: '#1a1a1a', borderRadius: '24px', padding: '36px', boxShadow: '0 8px 40px rgba(0,0,0,0.4)', marginBottom: '24px', border: '1px solid rgba(212,175,55,0.15)' },
     secTitle: { fontWeight: 800, color: '#D4AF37', fontSize: '1.1rem', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '8px' },
     featurePill: { background: 'rgba(212,175,55,0.08)', border: '1px solid rgba(212,175,55,0.2)', color: '#D4AF37', fontSize: '0.82rem', fontWeight: 600, padding: '6px 14px', borderRadius: '50px', display: 'inline-block' },
-    inclRow: { display: 'flex', alignItems: 'center', gap: '8px', padding: '8px 0', borderBottom: '1px solid rgba(212,175,55,0.08)', fontSize: '0.9rem', color: '#5E7D9E' },
-    reviewCard: { background: 'rgba(212,175,55,0.04)', border: '1px solid rgba(212,175,55,0.12)', borderRadius: '16px', padding: '20px', marginBottom: '14px' },
+    inclRow: { display: 'flex', alignItems: 'center', gap: '8px', padding: '8px 0', borderBottom: '1px solid rgba(212,175,55,0.08)', fontSize: '0.9rem', color: 'rgba(255,255,255,0.7)' },
+    reviewCard: { background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(212,175,55,0.12)', borderRadius: '16px', padding: '20px', marginBottom: '14px' },
     stars: { display: 'flex', gap: '3px', color: '#FFB800', fontSize: '0.85rem', marginBottom: '8px' },
   };
 
@@ -131,7 +131,7 @@ export default function Resorts() {
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '12px' }}>
                   <div>
                     <h2 style={{ fontSize: '1.8rem', fontWeight: 900, color: '#D4AF37', marginBottom: '4px' }}>{activeResort.name}</h2>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#90A4B8', fontSize: '0.85rem' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: 'rgba(212,175,55,0.7)', fontSize: '0.85rem' }}>
                       <FaMapMarkerAlt />{activeResort.location}
                     </div>
                   </div>
@@ -141,7 +141,7 @@ export default function Resorts() {
                     {activeResort.beachAccess && <span title="Beach Access"><FaUmbrellaBeach color="#D4AF37" /></span>}
                   </div>
                 </div>
-                <p style={{ color: '#5E7D9E', lineHeight: 1.8, fontSize: '0.95rem', marginBottom: '20px' }}>{activeResort.description}</p>
+                <p style={{ color: 'rgba(255,255,255,0.8)', lineHeight: 1.8, fontSize: '0.95rem', marginBottom: '20px' }}>{activeResort.description}</p>
 
                 {/* Features */}
                 <div style={S.secTitle}>🎯 Features</div>
@@ -157,7 +157,7 @@ export default function Resorts() {
                     {activeResort.included.map((item, i) => (
                       <div key={i} style={{ ...S.inclRow, borderBottom: 'none' }}>
                         <FaCheck style={{ color: '#16a34a', flexShrink: 0 }} />
-                        <span style={{ fontWeight: item.includes('Free') ? 700 : 400, color: item.includes('Free') ? '#16a34a' : '#5E7D9E' }}>
+                        <span style={{ fontWeight: item.includes('Free') ? 700 : 400, color: item.includes('Free') ? '#16a34a' : 'rgba(255,255,255,0.7)' }}>
                           {item}
                         </span>
                       </div>
@@ -188,7 +188,7 @@ export default function Resorts() {
                 {activeResort.reviews.map((rev, i) => (
                   <div key={i} style={S.reviewCard}>
                     <div style={S.stars}>{[...Array(rev.rating)].map((_, j) => <FaStar key={j} />)}</div>
-                    <p style={{ color: '#5E7D9E', lineHeight: 1.7, fontSize: '0.92rem', marginBottom: '12px', fontStyle: 'italic' }}>"{rev.comment}"</p>
+                    <p style={{ color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, fontSize: '0.92rem', marginBottom: '12px', fontStyle: 'italic' }}>"{rev.comment}"</p>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                       <div style={{ width: '36px', height: '36px', borderRadius: '50%', background: 'linear-gradient(135deg, #1A1A1A, #D4AF37)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.1rem', overflow: 'hidden' }}>
                         {rev.avatar.startsWith('http') ? (
