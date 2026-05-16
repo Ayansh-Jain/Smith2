@@ -52,7 +52,7 @@ export default function Gallery() {
       borderRadius: '20px',
       overflow: 'hidden',
       aspectRatio: '4/3',
-      background: '#eee',
+      background: '#1a1a1a',
       cursor: 'pointer',
       position: 'relative',
     },

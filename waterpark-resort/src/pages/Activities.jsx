@@ -28,8 +28,8 @@ export default function Activities() {
     content: { maxWidth: '1300px', margin: '0 auto', padding: '80px 60px' },
     grid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '28px', marginBottom: '60px' },
     card: {
-      background: '#fff', borderRadius: '20px', padding: '28px',
-      boxShadow: '0 4px 24px rgba(0,100,160,0.07)', border: '1px solid rgba(212,175,55,0.1)',
+      background: '#1a1a1a', borderRadius: '20px', padding: '28px',
+      boxShadow: '0 4px 24px rgba(0,0,0,0.4)', border: '1px solid rgba(212,175,55,0.15)',
     },
     emojiBox: {
       width: '60px', height: '60px', borderRadius: '16px',
@@ -39,7 +39,7 @@ export default function Activities() {
       fontSize: '1.8rem', marginBottom: '16px',
     },
     cardTitle: { fontWeight: 800, color: '#D4AF37', fontSize: '1.05rem', marginBottom: '10px' },
-    cardDesc: { color: '#5E7D9E', fontSize: '0.87rem', lineHeight: 1.65, marginBottom: '16px' },
+    cardDesc: { color: 'rgba(255,255,255,0.7)', fontSize: '0.87rem', lineHeight: 1.65, marginBottom: '16px' },
     resortTag: {
       display: 'inline-block', background: 'rgba(212,175,55,0.08)', border: '1px solid rgba(212,175,55,0.18)',
       color: '#FFD700', fontSize: '0.72rem', fontWeight: 600, padding: '3px 10px',
@@ -85,7 +85,7 @@ export default function Activities() {
         <motion.div style={S.ctaBar} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <div>
             <p style={{ fontSize: '1.2rem', fontWeight: 700, color: '#D4AF37' }}>🎯 Ready to book your resort experience?</p>
-            <p style={{ color: '#5E7D9E', fontSize: '0.9rem', marginTop: '4px' }}>Select a resort and confirm with just ₹50/person advance.</p>
+            <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem', marginTop: '4px' }}>Select a resort and confirm with just ₹50/person advance.</p>
           </div>
           <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
             <Link to="/booking" style={{ padding: '14px 34px', borderRadius: '14px', background: 'linear-gradient(135deg, #D4AF37, #FFD700)', color: '#fff', fontWeight: 700, fontSize: '1rem', boxShadow: '0 6px 24px rgba(212,175,55,0.4)', display: 'inline-block' }}>

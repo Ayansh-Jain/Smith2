@@ -10,7 +10,7 @@ const faqs = [
   { q: 'What is the travel assistance charge?', a: 'Travel assistance is now FREE for groups of 4 or more members. It includes pickup and drop from your location.' },
 
   { q: 'Are rooms available at the resort?', a: 'Rooms are available at select resorts (DreamWorld, Aqua Palace, Vaity Aqua, Visava, Kshitij) and are subject to availability. Contact us in advance to check.' },
-  { q: 'What happens if I cancel?', a: 'Please WhatsApp us at 7721819073 for cancellation or rescheduling. Advance amounts are refunded or adjusted as per resort policy.' },
+  { q: 'What happens if I cancel?', a: 'Please WhatsApp us at +91 9272395227 for cancellation or rescheduling. Advance amounts are refunded or adjusted as per resort policy.' },
 ];
 
 export default function Pricing() {
@@ -21,16 +21,16 @@ export default function Pricing() {
     sub: { color: 'rgba(255,255,255,0.7)', fontSize: '1.05rem', maxWidth: '520px', margin: '0 auto', lineHeight: 1.7 },
     content: { maxWidth: '1100px', margin: '0 auto', padding: '80px 60px 100px' },
     secTitle: { fontSize: '1.8rem', fontWeight: 900, color: '#D4AF37', letterSpacing: '-0.5px', marginBottom: '10px' },
-    secSub: { color: '#5E7D9E', marginBottom: '40px', fontSize: '0.97rem' },
-    table: { width: '100%', borderCollapse: 'separate', borderSpacing: 0, background: '#fff', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 6px 30px rgba(0,100,160,0.08)', marginBottom: '60px' },
+    secSub: { color: 'rgba(255,255,255,0.7)', marginBottom: '40px', fontSize: '0.97rem' },
+    table: { width: '100%', borderCollapse: 'separate', borderSpacing: 0, background: '#1a1a1a', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 6px 30px rgba(0,0,0,0.4)', marginBottom: '60px', border: '1px solid rgba(212,175,55,0.15)' },
     th: { background: 'linear-gradient(135deg, #D4AF37, #FFD700)', color: '#fff', padding: '18px 24px', textAlign: 'left', fontSize: '0.85rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' },
-    td: (even) => ({ padding: '15px 24px', borderBottom: '1px solid rgba(212,175,55,0.08)', background: even ? 'rgba(212,175,55,0.03)' : '#fff', color: '#5E7D9E', fontSize: '0.92rem' }),
-    tdBold: (even) => ({ padding: '15px 24px', borderBottom: '1px solid rgba(212,175,55,0.08)', background: even ? 'rgba(212,175,55,0.03)' : '#fff', color: '#D4AF37', fontWeight: 700, fontSize: '0.95rem' }),
-    priceCell: (even) => ({ padding: '15px 24px', borderBottom: '1px solid rgba(212,175,55,0.08)', background: even ? 'rgba(212,175,55,0.03)' : '#fff', color: '#D4AF37', fontWeight: 900, fontSize: '1.1rem' }),
+    td: (even) => ({ padding: '15px 24px', borderBottom: '1px solid rgba(212,175,55,0.1)', background: even ? 'rgba(255,255,255,0.02)' : '#1a1a1a', color: 'rgba(255,255,255,0.7)', fontSize: '0.92rem' }),
+    tdBold: (even) => ({ padding: '15px 24px', borderBottom: '1px solid rgba(212,175,55,0.1)', background: even ? 'rgba(255,255,255,0.02)' : '#1a1a1a', color: '#D4AF37', fontWeight: 700, fontSize: '0.95rem' }),
+    priceCell: (even) => ({ padding: '15px 24px', borderBottom: '1px solid rgba(212,175,55,0.1)', background: even ? 'rgba(255,255,255,0.02)' : '#1a1a1a', color: '#FFD700', fontWeight: 900, fontSize: '1.1rem' }),
     addonsGrid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '20px', marginBottom: '60px' },
-    addonCard: { background: '#fff', borderRadius: '20px', padding: '28px', boxShadow: '0 4px 20px rgba(0,100,160,0.07)', border: '1px solid rgba(212,175,55,0.12)', textAlign: 'center' },
+    addonCard: { background: '#1a1a1a', borderRadius: '20px', padding: '28px', boxShadow: '0 4px 20px rgba(0,0,0,0.4)', border: '1px solid rgba(212,175,55,0.15)', textAlign: 'center' },
     advanceBox: { background: 'linear-gradient(135deg, #D4AF37, #FFD700)', borderRadius: '24px', padding: '48px', marginBottom: '60px', textAlign: 'center', position: 'relative', overflow: 'hidden' },
-    faqBox: { background: 'linear-gradient(135deg, #f0f9ff, #e0f2ff)', borderRadius: '24px', padding: '50px', border: '1px solid rgba(212,175,55,0.15)' },
+    faqBox: { background: 'rgba(255,255,255,0.03)', borderRadius: '24px', padding: '50px', border: '1px solid rgba(212,175,55,0.15)' },
   };
 
   return (
@@ -125,8 +125,8 @@ export default function Pricing() {
               transition={{ delay: i * 0.1 }} whileHover={{ y: -6 }}>
               <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>{item.icon}</div>
               <div style={{ fontWeight: 800, color: item.color, fontSize: '1rem', marginBottom: '6px' }}>{item.title}</div>
-              <div style={{ fontWeight: 900, color: '#D4AF37', fontSize: '1.8rem', marginBottom: '4px' }}>{item.price}</div>
-              <div style={{ color: '#90A4B8', fontSize: '0.82rem' }}>{item.note}</div>
+              <div style={{ fontWeight: 900, color: '#FFD700', fontSize: '1.8rem', marginBottom: '4px' }}>{item.price}</div>
+              <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.82rem' }}>{item.note}</div>
             </motion.div>
           ))}
         </div>
@@ -137,7 +137,7 @@ export default function Pricing() {
           {faqs.map((f, i) => (
             <div key={i} style={{ borderBottom: '1px solid rgba(212,175,55,0.15)', paddingBottom: '20px', marginBottom: '20px' }}>
               <p style={{ fontWeight: 700, color: '#D4AF37', marginBottom: '8px', fontSize: '0.97rem' }}>Q: {f.q}</p>
-              <p style={{ color: '#5E7D9E', fontSize: '0.93rem', lineHeight: 1.7 }}>A: {f.a}</p>
+              <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.93rem', lineHeight: 1.7 }}>A: {f.a}</p>
             </div>
           ))}
         </motion.div>

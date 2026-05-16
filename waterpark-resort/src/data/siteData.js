@@ -5,8 +5,8 @@ export const brand = {
   name: 'Book My Resorts',
   tagline: 'Your Passport to Adventure',
   logo: '/logo.jpg',
-  phone: '7721819073',
-  whatsapp: 'https://wa.me/7721819073',
+  phone: '+91 9272395227',
+  whatsapp: 'https://wa.me/9272395227',
   email: 'support@myresortbooking.in',
   address: 'Virar West, Mumbai, Maharashtra',
   copyright: '© 2025 Book My Resorts. All rights reserved.',
@@ -322,9 +322,9 @@ export const paymentInfo = {
     "Copy it and enter 'Bank Reference Number' in the box below.",
     'Select the date on which your payment is deducted.',
     "A Pop-up 'Download Ticket' button will appear, click on it to download your ticket.",
-    'Take a screenshot of the ticket and send it to WhatsApp No. 7721819073.',
+    'Take a screenshot of the ticket and send it to WhatsApp No. +91 9272395227.',
   ],
-  whatsapp: 'https://wa.me/7721819073',
+  whatsapp: 'https://wa.me/9272395227',
 };
 
 // BOOKING PRICING CONSTANTS

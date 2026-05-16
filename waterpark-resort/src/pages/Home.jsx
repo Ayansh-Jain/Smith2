@@ -24,7 +24,7 @@ export default function Home() {
 
   const styles = {
     section: { padding: '100px 60px', maxWidth: '1300px', margin: '0 auto' },
-    sectionWhite: { padding: '100px 60px', background: 'rgba(212,175,55,0.03)' },
+    sectionWhite: { padding: '100px 60px', background: 'rgba(255,255,255,0.02)' },
     sectionInner: { maxWidth: '1300px', margin: '0 auto' },
     badge: {
       display: 'inline-block', background: 'rgba(212,175,55,0.1)', color: '#D4AF37',
@@ -54,8 +54,8 @@ export default function Home() {
     },
     // Pricing comparison table
     pricingTable: {
-      background: '#fff', borderRadius: '24px', overflow: 'hidden',
-      boxShadow: '0 8px 40px rgba(0,100,160,0.08)', border: '1px solid rgba(212,175,55,0.1)',
+      background: '#1a1a1a', borderRadius: '24px', overflow: 'hidden',
+      boxShadow: '0 8px 40px rgba(0,0,0,0.4)', border: '1px solid rgba(212,175,55,0.15)',
     },
     pricingHeader: {
       background: 'linear-gradient(135deg, #D4AF37, #FFD700)',
@@ -67,8 +67,8 @@ export default function Home() {
       padding: '16px 32px', display: 'grid',
       gridTemplateColumns: '1fr 120px 120px',
       gap: '16px', alignItems: 'center',
-      background: alt ? 'rgba(212,175,55,0.04)' : '#fff',
-      borderBottom: '1px solid rgba(212,175,55,0.08)',
+      background: alt ? 'rgba(255,255,255,0.03)' : '#1a1a1a',
+      borderBottom: '1px solid rgba(212,175,55,0.1)',
     }),
     // Reviews carousel
     reviewCard: {
@@ -212,7 +212,7 @@ export default function Home() {
         </p>
         <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
-            <Link to="/booking" style={{ display: 'inline-block', padding: '18px 50px', borderRadius: '50px', background: 'linear-gradient(135deg, #887400ff, #9c7f00ff)', color: '#fff', fontWeight: 800, fontSize: '1.1rem', boxShadow: '0 10px 40px rgba(255,215,0,0.5)' }}>
+            <Link to="/booking" style={{ display: 'inline-block', padding: '18px 50px', borderRadius: '50px', background: 'linear-gradient(135deg, #D4AF37, #FFD700)', color: '#000', fontWeight: 800, fontSize: '1.1rem', boxShadow: '0 10px 40px rgba(212,175,55,0.5)' }}>
               Book Now
             </Link>
           </motion.div>
